@@ -1,0 +1,203 @@
+[
+  {
+    "keys": ["ctrl+f"],
+    "command": "display_search_panel_enhanced",
+    "args": {
+      "type": "fuzzy"
+    },
+    "context": [
+      {"key": "overlay_visible", "operator": "equal", "operand": false}
+    ],
+  },
+
+  {
+    "keys": ["ctrl+shift+f"],
+    "command": "display_search_panel_enhanced",
+    "args": {
+      "type": "fuzzy",
+      "backward": true
+    }
+  },
+
+  {
+    "keys": ["ctrl+alt+f"],
+    "command": "display_search_panel_enhanced"
+  },
+
+  {
+    "keys": ["ctrl+alt+shift+f"],
+    "command": "display_search_panel_enhanced",
+    "args": {
+      "backward": true
+    }
+  },
+
+  {
+    "keys": ["alt+f"],
+    "command": "goto_next_search_panel_enhanced_result",
+  },
+
+  {
+    "keys": ["alt+shift+f"],
+    "command": "goto_next_search_panel_enhanced_result",
+    "args": {
+      "backward": true
+    }
+  },
+
+  {
+    "keys": ["alt+e"],
+    "command": "search_panel_enhanced_find_under",
+    "context": [
+      {"key": "last_command", "operator": "not_equal", "operand": "search_panel_enhanced_find_under"},
+      {"key": "setting.is_widget", "operator": "equal", "operand": false}
+    ],
+  },
+
+  {
+    "keys": ["alt+e"],
+    "command": "search_panel_enhanced_find_under",
+    "args": {
+      "next": true
+    },
+    "context": [
+      {"key": "last_command", "operator": "equal", "operand": "search_panel_enhanced_find_under"},
+      {"key": "setting.is_widget", "operator": "equal", "operand": false}
+    ],
+  },
+
+  {
+    "keys": ["alt+shift+e"],
+    "command": "search_panel_enhanced_find_under",
+    "args": {
+      "backward": true
+    },
+    "context": [
+      {"key": "last_command", "operator": "not_equal", "operand": "search_panel_enhanced_find_under"},
+    ],
+  },
+
+  {
+    "keys": ["alt+shift+e"],
+    "command": "search_panel_enhanced_find_under",
+    "args": {
+      "backward": true,
+      "next": true
+    },
+    "context": [
+      {"key": "last_command", "operator": "equal", "operand": "search_panel_enhanced_find_under"},
+    ],
+  },
+
+  {
+    "keys": ["ctrl+enter"],
+    "command": "search_panel_enhanced_complete",
+    "args": {
+      "end": true
+    },
+    "context": [
+      {"key": "is_search_panel_enhanced_visible", "operator" : "equal", "operand": true}
+    ]
+  },
+
+  {
+    "keys": ["shift+enter"],
+    "command": "search_panel_enhanced_complete",
+    "args": {
+      "select": true
+    },
+    "context": [
+      {"key": "is_search_panel_enhanced_visible", "operator" : "equal", "operand": true}
+    ]
+  },
+
+  {
+    "keys": ["ctrl+shift+enter"],
+    "command": "search_panel_enhanced_select_all",
+    "context": [
+      {"key": "is_search_panel_enhanced_visible", "operator" : "equal", "operand": true}
+    ]
+  },
+
+  {
+    "keys": ["alt+q"],
+    "command": "set_search_enhanced_options",
+    "args": {
+      "type": "regexp"
+    },
+    "context": [
+      {"key": "is_search_panel_enhanced_visible", "operator" : "equal", "operand": true}
+    ]
+  },
+
+  {
+    "keys": ["alt+w"],
+    "command": "set_search_enhanced_options",
+    "args": {
+      "type": "word"
+    },
+    "context": [
+      {"key": "is_search_panel_enhanced_visible", "operator" : "equal", "operand": true}
+    ]
+  },
+
+  {
+    "keys": ["alt+e"],
+    "command": "set_search_enhanced_options",
+    "args": {
+    "type": "fuzzy"
+  },
+    "context": [
+      {"key": "is_search_panel_enhanced_visible", "operator" : "equal", "operand": true}
+    ]
+  },
+
+  {
+    "keys": ["alt+s"],
+    "command": "set_search_enhanced_options",
+    "args": {
+      "case_sensetive": "toggle"
+    },
+    "context": [
+      {"key": "is_search_panel_enhanced_visible", "operator" : "equal", "operand": true}
+    ]
+  },
+
+  {
+    "keys": ["alt+i"],
+    "command": "search_panel_enhanced_goto_history",
+    "args": {
+      "backward": true
+    },
+    "context": [
+      {"key": "is_search_panel_enhanced_visible", "operator" : "equal", "operand": true}
+    ]
+  },
+
+  {
+    "keys": ["alt+k"],
+    "command": "search_panel_enhanced_goto_history",
+    "args": {
+      "backward": false
+    },
+    "context": [
+      {"key": "is_search_panel_enhanced_visible", "operator" : "equal", "operand": true}
+    ]
+  },
+
+  {
+    "keys": ["ctrl+s"],
+    "command": "search_panel_enhanced_select_to_found",
+    "context": [
+      {"key": "is_search_panel_enhanced_visible", "operator" : "equal", "operand": true}
+    ]
+  },
+
+  {
+    "keys": ["ctrl+d"],
+    "command": "search_panel_enhanced_delete_to_found",
+    "context": [
+      {"key": "is_search_panel_enhanced_visible", "operator" : "equal", "operand": true}
+    ]
+  },
+]

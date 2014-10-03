@@ -1,0 +1,92 @@
+[
+  {
+    "caption": "SearchPanelEnhanced: Display fuzzy",
+    "command": "display_search_panel_enhanced",
+    "args": {
+      "type": "fuzzy"
+    },
+    "context": [
+      {"key": "overlay_visible", "operator": "equal", "operand": false}
+    ],
+  },
+
+  {
+    "caption": "SearchPanelEnhanced: Display fuzzy backward",
+    "command": "display_search_panel_enhanced",
+    "args": {
+      "type": "fuzzy",
+      "backward": true
+    }
+  },
+
+  {
+    "caption": "SearchPanelEnhanced: Display normal",
+    "command": "display_search_panel_enhanced"
+  },
+
+  {
+    "caption": "SearchPanelEnhanced: Display normal backward",
+    "command": "display_search_panel_enhanced",
+    "args": {
+      "backward": true
+    }
+  },
+
+  {
+    "caption": "SearchPanelEnhanced: Goto next result",
+    "command": "goto_next_search_panel_enhanced_result",
+  },
+
+  {
+    "caption": "SearchPanelEnhanced: Goto previous result",
+    "command": "goto_next_search_panel_enhanced_result",
+    "args": {
+      "backward": true
+    }
+  },
+
+  {
+    "caption": "SearchPanelEnhanced: Find under",
+    "command": "search_panel_enhanced_find_under",
+    "context": [
+      {"key": "last_command", "operator": "not_equal", "operand": "search_panel_enhanced_find_under"},
+      {"key": "setting.is_widget", "operator": "equal", "operand": false}
+    ],
+  },
+
+  {
+    "caption": "SearchPanelEnhanced: Find under",
+    "command": "search_panel_enhanced_find_under",
+    "args": {
+      "next": true
+    },
+    "context": [
+      {"key": "last_command", "operator": "equal", "operand": "search_panel_enhanced_find_under"},
+      {"key": "setting.is_widget", "operator": "equal", "operand": false}
+    ],
+  },
+
+  {
+    "caption": "SearchPanelEnhanced: Find under backward",
+    "command": "search_panel_enhanced_find_under",
+    "args": {
+      "backward": true
+    },
+    "context": [
+      {"key": "last_command", "operator": "not_equal", "operand": "search_panel_enhanced_find_under"},
+    ],
+  },
+
+  {
+    "caption": "SearchPanelEnhanced: Find under backward",
+    "command": "search_panel_enhanced_find_under",
+    "args": {
+      "backward": true,
+      "next": true
+    },
+    "context": [
+      {"key": "last_command", "operator": "equal", "operand": "search_panel_enhanced_find_under"},
+    ],
+  }
+
+]
