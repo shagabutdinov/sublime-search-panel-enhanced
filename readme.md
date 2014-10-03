@@ -88,3 +88,8 @@ to go to found.
 | Show next search              | alt+k              |                                              |
 | Select to found               | ctrl+s             |                                              |
 | Delete to found               | ctrl+d             |                                              |
+
+
+### Dependencies
+
+- https://github.com/shagabutdinov/sublime-status-message
