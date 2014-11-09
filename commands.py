@@ -1,4 +1,5 @@
 import sublime_plugin
+
 from SearchPanelEnhanced.search_panel import get_panel
 
 class DisplaySearchPanelEnhanced(sublime_plugin.TextCommand):

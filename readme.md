@@ -5,7 +5,7 @@ Replacement for default sublime "search in file" functionality.
 
 ### Demo
 
-![Demo](https://raw.github.com/shagabutdinov/sublime-search-panel-enhanced/master/demo/demo.gif "Demo")
+![Demo](https://github.com/shagabutdinov/sublime-enhanced-demos/raw/master/search_panel_enhanced.gif "Demo")
 
 
 ### WARNING
@@ -92,4 +92,4 @@ to go to found.
 
 ### Dependencies
 
-- https://github.com/shagabutdinov/sublime-status-message
+* [StatusMessage](https://github.com/shagabutdinov/sublime-status-message)

@@ -1,7 +1,16 @@
 import sublime_plugin
 import sublime
+
 from SearchPanelEnhanced import search_panel
-from StatusMessage import status_message
+
+try:
+  from StatusMessage import status_message
+except ImportError:
+  sublime.error_message("Dependency import failed; please read readme for " +
+   "StatusMessage plugin for installation instructions; to disable this " +
+   "message remove this plugin")
+
+
 
 class ContextResponder(sublime_plugin.EventListener):
   def on_query_context(self, view, key, operator, operand, _):
