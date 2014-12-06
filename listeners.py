@@ -7,7 +7,7 @@ try:
   from StatusMessage import status_message
 except ImportError:
   sublime.error_message("Dependency import failed; please read readme for " +
-   "StatusMessage plugin for installation instructions; to disable this " +
+   "SearchPanelEnhanced plugin for installation instructions; to disable this " +
    "message remove this plugin")
 
 
