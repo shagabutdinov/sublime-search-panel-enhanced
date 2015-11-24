@@ -4,11 +4,11 @@ import re
 
 try:
   from StatusMessage import status_message
-except ImportError:
+except ImportError as error:
   sublime.error_message("Dependency import failed; please read readme for " +
    "StatusMessage plugin for installation instructions; to disable this " +
-   "message remove this plugin")
-
+   "message remove this plugin; message: " + str(error))
+  raise error
 
 panel = None
 def get_panel(view = None, type = None, case_sensetive = None, backward = None):
